@@ -1,9 +1,13 @@
 <DOCTYPE html>
   <html lang="en">
     <head>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>David Russell's Portfolio Website</title>
+        <title>David Russell's Portfolio</title>
+        <link rel="shortcut icon"  type="image/png" href="../img/favicon.png">
+
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.win.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
@@ -11,116 +15,158 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap">
 
         <link rel="stylesheet" href="css/style.css">
+
     </head>
 
     <body>
-        <header>
-          <div class="logo">
-              <img src="images/stock1.jpg" alt="stock">
-          </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                  <span class="hamburger"> </span>
-            </button>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#ervices" class="nav__link">My Services</a></li>
-                <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-              </ul>
-
-
-            </nav>
-        </header>
+        
 
         <!--Introduction-->
         <section class="intro" id="home">
             <h1 class="section__title section__title--intro">
                 Hello! My name is <strong> David Russell </strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Software Developer</p>
-            <img src="images/stock2.jpg" alt="picofme">
+            <p class="section__subtitle section__subtitle--intro">M.S. CS student at CU-Denver</p>
+
+
+            <img src="images/picofme.jpg" alt="picofme" class="intro__img">
+
+
+
 
         </section>
 
-        <!--My Services-->
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
-                <div class="service">
-                  <h3>1st thing</h3>
-                  <p>lorem ipsum dolem</p>
-                </div>
-
-                <div class="service">
-                  <h3>2nd thing</h3>
-                  <p>lorem ipsum dolem</p>
-                </div>
-
-                <div class="service">
-                  <h3>3rd thing</h3>
-                  <p>lorem ipsum dolem</p>
-                </div>
-
-            </div>
-
-            <a href="#work" class="btn">My Work</a>
-        </section>
-
-        <!--About Me-->
-        <section class="about-me" id="about">
-              <h2 class="section__title section__title--about">Who I am</h2>
-              <p class="section__subtitle section__subtitle--about"></p>
-
-              <div class="about-me__body">
-                  <p>lorem ipsum</p>
-                  <p>lorem ipsum</p>
-              </div>
-              <img src="images/stock8.jpg" alt="">
-        </section>
+        <div class="links__list">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
+          <li class="nav__item"><a href="#about_me" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
+        </div>
 
         <!--my work-->
         <section class="my-work" id="work">
-            <h2 class="section__title">My Work</h2>
-            <p class="section__subtitle"></p>
+            <h2 class="section__title">My Recent Work</h2>
+            <p class="section__subtitle section__subtitle--portfolio">A sample of my past projects</p>
 
             <div class="portfolio">
               <!--item 1-->
-              <a href="#" class="portfolio__item">
-                  <img src="images/stock3.jpg" alt="">
+              <a href="project_pages/riverreporter.html" class="portfolio__item">
+                  <img src="images/projects/riverreporter/cover.JPG" alt="" class="portfolio__img">
+                  <div class="img_description_layer">
+                    <p class="img_description">River Reporter</p>
+                  </div>
               </a>
               <!--item 2-->
-              <a href="#" class="portfolio__item">
-                  <img src="images/stock4.jpg" alt="">
+              <a href="project_pages/battleship.html" class="portfolio__item">
+                  <img src="images/projects/battleship/cover.JPG" alt="" class="portfolio__img">
               </a>
               <!--item 3-->
-              <a href="#" class="portfolio__item">
-                  <img src="images/stock5.jpg" alt="">
+              <a href="project_pages/wildfires.html" class="portfolio__item">
+                  <img src="images/projects/wildfires/cover.JPG" alt="" class="portfolio__img">
               </a>
               <!--item 4-->
               <a href="#" class="portfolio__item">
-                  <img src="images/stock6.jpg" alt="">
+                  <img src="images/projects/awards/cover.JPG" alt="" class="portfolio__img">
               </a>
               <!--item 5-->
               <a href="#" class="portfolio__item">
-                  <img src="images/stock7.jpg" alt="">
+                  <img src="images/projects/gutenberg/cover.JPG" alt="" class="portfolio__img">
               </a>
               <!--item 6-->
               <a href="#" class="portfolio__item">
-                  <img src="images/stock8.jpg" alt="">
+                  <img src="images/projects/scheduler/cover.JPG" alt="" class="portfolio__img">
+              </a>
+              <!--item 7-->
+              <a href="#" class="portfolio__item">
+                  <img src="images/projects/shell/cover.JPG" alt="" class="portfolio__img">
               </a>
             </div>
             </section>
 
-            <!--footer-->
-            <a href="mailto:druss337@gmail.com" class="footer__link">druss337@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list__item"><a class="social-list__link"
-                  href="https://github.com">Github</a></li>
-                <li class="social-list__item"><a class="social-list__link"
-                    href="https://linkedin.com">LinkedIn</a></li>
 
-            </ul>
+        <!--My Services-->
+        <section class="my-services" id="resume">
+            <h2 class="section__title section__title--services">Resume</h2>
+            <div class="services">
+                <div class="service">
+                  <h3>1st thing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed a eros vitae nulla efficitur blandit tempor nec purus.
+                    Donec posuere magna sit amet risus pharetra molestie.
+                    Donec ac tortor consectetur, fringilla metus in, ornare sapien.
+                    Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
+                    at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
+                    libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
+                    sagittis risus.</p>
+                </div>
+
+                <div class="service">
+                  <h3>2nd thing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed a eros vitae nulla efficitur blandit tempor nec purus.
+                    Donec posuere magna sit amet risus pharetra molestie.
+                    Donec ac tortor consectetur, fringilla metus in, ornare sapien.
+                    Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
+                    at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
+                    libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
+                    sagittis risus</p>
+                </div>
+
+                <div class="service">
+                  <h3>3rd thing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed a eros vitae nulla efficitur blandit tempor nec purus.
+                    Donec posuere magna sit amet risus pharetra molestie.
+                    Donec ac tortor consectetur, fringilla metus in, ornare sapien.
+                    Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
+                    at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
+                    libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
+                    sagittis risus</p>
+                </div>
+
+            </div>
+
+
+        </section>
+
+        <!--About Me-->
+        <section class="about-me" id="about_me">
+              <h2 class="section__title section__title--about">About Me</h2>
+              <p class="section__subtitle section__subtitle--about">Based in Denver, Co</p>
+
+              <div class="about-me__body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed a eros vitae nulla efficitur blandit tempor nec purus.
+                    Donec posuere magna sit amet risus pharetra molestie.
+                    Donec ac tortor consectetur, fringilla metus in, ornare sapien.
+                    Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
+                    at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
+                    libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
+                    sagittis risus</p>
+                  <p>lorem ipsum</p>
+              </div>
+              <img src="images/stock8.jpg" class="about__img">
+        </section>
+
+
+
+            <!--footer-->
+            <footer class="footer">
+              <p class="section__title section__title--footer">Reach out here!</p>
+              <a href="mailto:druss337@gmail.com" class="footer__link" id="contact">druss337@gmail.com</a>
+              <ul class="social-list">
+
+
+                  <li class="social-list__item"><a class="social-list__link"
+                    href="https://github.com/dmruss">
+                    <i class="fab fa-github-square"></i></a></li>
+
+                    <li class="social-list__item"><a class="social-list__link"
+                      href="https://www.linkedin.com/in/david-russell-1ab47793/">
+                      <i class="fab fa-linkedin"></i></a></li>
+
+                    </ul>
+            </footer>
     </body>
 
     </html>
