@@ -229,21 +229,25 @@ header {
       position: relative;
       z-index: 2;
       grid-row: 4;
+
     }
 
     .section__title--intro {
       grid-row: 4;
+      transform: translateY(30%);
       grid-column: 2;
     }
 
     .section__subtitle--intro {
       align-self: start;
       grid-column: -1/1;
-      grid-row: 5;
-      transform: translate(0%, -250%);
+      grid-row: 5 / -1;
+      margin-top: -100px;
+
       text-align: left;
       text-indent: 16.5em;
-      position: relative;
+      position: absolute;
+      transform: translateY(10%);
       left: -3em;
       width: calc(100% + 5em);
     }
@@ -294,7 +298,7 @@ header {
 .section__title--services {
   color: var(--clr-accent);
   position: relative;
-
+  transform: translate(0%, 20%);
 }
 
 .section__title--services::after {
@@ -364,7 +368,7 @@ header {
     }
 
     .section__subtitle--about {
-
+      margin-left: 180px;
 
       transform: translate(19%, 0%);
 
@@ -391,7 +395,9 @@ header {
 
 /*my work*/
 
-
+.section__title-portfolio {
+  transform: translate(0, 20%);
+}
 
 .my-work {
   text-align: center;
@@ -405,6 +411,7 @@ header {
   color: var(--clr-accent);
   margin-bottom: 2em;
   font-family: var(--ff-secondary);
+  transform: translate(0, 20%);
 }
 
 
@@ -570,4 +577,18 @@ header {
   grid-column:1;
   min-width: 600px;
 }
+}
+
+.inline-photo {
+  border: 1em solid #fff;
+border-bottom: 4em solid #fff;
+border-radius: .25em;
+box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+margin: 2em auto;
+opacity: 1;
+transform: translateY(1em) rotateZ(-5deg);
+
+max-width: 600px;
+width: 90%;
+
 }

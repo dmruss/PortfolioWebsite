@@ -13,24 +13,28 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <link rel="stylesheet" href="css/style.css">
+        
 
     </head>
 
+
+
+
     <body>
-        
+
 
         <!--Introduction-->
         <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
+            <h1 class="section__title section__title--intro" >
                 Hello! My name is <strong> David Russell </strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">M.S. CS student at CU-Denver</p>
+            <p class="section__subtitle section__subtitle--intro" data-aos="fade-in" >M.S. CS student at CU-Denver</p>
 
 
-            <img src="images/picofme.jpg" alt="picofme" class="intro__img">
-
+            <img src="images/picofme.jpg" alt="picofme" class="intro__img inline-photo">
 
 
 
@@ -43,10 +47,12 @@
           <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
         </div>
 
+
+
         <!--my work-->
         <section class="my-work" id="work">
-            <h2 class="section__title">My Recent Work</h2>
-            <p class="section__subtitle section__subtitle--portfolio">A sample of my past projects</p>
+            <h2 class="section__title-portfolio" data-aos="fade-in">My Recent Work</h2>
+            <p class="section__subtitle section__subtitle--portfolio" data-aos="fade-in">A sample of my past projects</p>
 
             <div class="portfolio">
               <!--item 1-->
@@ -86,7 +92,7 @@
 
         <!--My Services-->
         <section class="my-services" id="resume">
-            <h2 class="section__title section__title--services">Resume</h2>
+            <h2 class="section__title section__title--services" data-aos="fade-in" data-aos-duration="1000">Resume</h2>
             <div class="services">
                 <div class="service">
                   <h3>1st thing</h3>
@@ -132,7 +138,7 @@
         <!--About Me-->
         <section class="about-me" id="about_me">
               <h2 class="section__title section__title--about">About Me</h2>
-              <p class="section__subtitle section__subtitle--about">Based in Denver, Co</p>
+              <p class="section__subtitle section__subtitle--about" data-aos="fade-in">Based in Denver, Co</p>
 
               <div class="about-me__body">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -145,7 +151,7 @@
                     sagittis risus</p>
                   <p>lorem ipsum</p>
               </div>
-              <img src="images/stock8.jpg" class="about__img">
+              <img src="images/stock8.jpg" class="about__img" data-aos="fade-in">
         </section>
 
 
@@ -167,6 +173,10 @@
 
                     </ul>
             </footer>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+            AOS.init();
+            </script>
     </body>
 
     </html>
