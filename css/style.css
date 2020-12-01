@@ -15,7 +15,7 @@
 
     --clr-light: #FFF;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #5c67ff;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -99,6 +99,7 @@ h3 {font-size: var(--fs-h3);}
 }
 
 .section__title--intro {
+
   font-weight: var(--fw-reg);
 
 }
@@ -120,6 +121,7 @@ h3 {font-size: var(--fs-h3);}
   font-family: var(--ff-secondary);
   color: var(--clr-dark);
   margin-bottom: 1em;
+  transform: translateY(-400%);
 }
 
 
@@ -243,18 +245,19 @@ header {
       grid-row: 4;
       transform: translateY(30%);
       grid-column: 2;
+      max-height: 300px;
     }
 
     .section__subtitle--intro {
       align-self: start;
       grid-column: -1/1;
       grid-row: 5 / -1;
-      margin-top: -100px;
+      margin-top: -150px;
 
       text-align: left;
       text-indent: 16.5em;
       position: absolute;
-      transform: translateY(10%);
+      transform: translateY(-400%);
       left: -3em;
       width: calc(100% + 5em);
 
@@ -355,7 +358,7 @@ header {
   box-shadow: var(--bs);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .about-me {
 
       display: grid;
@@ -542,8 +545,9 @@ header {
 }
 
 
-
-
+.section__subtitle--intro-project {
+  transform: translate(0%, -400%);
+}
 
 
 .portfolio-item-individual {
@@ -551,13 +555,32 @@ header {
   grid-template-columns: 200px 200px 200px;*/
   padding: 0 2em 2em;
   max-width: 1000px;
-  margin: 0 auto;
+
+
+}
+
+.portfolio-item-individual-image {
+  box-shadow: var(--bs)
+}
+
+.portfolio-item-individual-image-graph {
+
+
+    box-shadow: var(--bs)
+}
+
+.portfolio-item-individual-image-river {
+  max-width:300px;
+  grid-column: 1;
 }
 
 @media (min-width: 1000px) {
 
 
-
+.section__subtitle--intro-project {
+  transform: translate(0%, -400%);
+  margin-top: -220px;;
+}
 
 .portfolio-item-individual {
   display: grid;
@@ -571,16 +594,21 @@ header {
   padding: 0 2em 2em;
   min-width: 600px;
   grid-column: 3;
+
 }
 
 .portfolio-item-individual-image {
   grid-column:1;
   min-width: 400px;
+  box-shadow: var(--bs)
 }
 
+
+
 .portfolio-item-individual-image-graph {
-  grid-column:1;
+  grid-column: 1/-1;
   min-width: 600px;
+  box-shadow: var(--bs)
 }
 }
 

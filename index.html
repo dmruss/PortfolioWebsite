@@ -5,7 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>David Russell's Portfolio</title>
-        <link rel="shortcut icon"  type="image/png" href="../img/favicon.png">
+        <link rel="shortcut icon"  type="image/png" href="img/favicon.png?v=1"/>
+        <link rel="icon"  type="image/png" href="img/favicon.png?v=1"/>
 
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.win.css">
@@ -23,7 +24,7 @@
 
 
 
-    <body>
+    <body style="width:100%; margin:0px; padding:0px; overflow-x:hidden">
 
 
         <!--Introduction-->
@@ -31,7 +32,7 @@
             <h1 class="section__title section__title--intro" >
                 Hello! My name is <strong> David Russell </strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro" data-aos="fade-in" data-aos-duration="1500">M.S. CS student at CU-Denver</p>
+            <p class="section__subtitle section__subtitle--intro section__subtitle--intro-home" data-aos="fade-in" data-aos-duration="1500">M.S. CS student at CU-Denver</p>
 
 
             <img src="images/picofme.jpg" alt="picofme" class="intro__img inline-photo" >
@@ -43,7 +44,7 @@
         <div class="links__list">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
           <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
-          <li class="nav__item"><a href="#about_me" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="#aboutme" class="nav__link">About Me</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
         </div>
 
@@ -78,28 +79,28 @@
 
               </a>
               <!--item 4-->
-              <a href="#" class="portfolio__item">
+              <a href="project_pages/awards.html" class="portfolio__item">
                   <img src="images/projects/awards/cover.JPG" alt="" class="portfolio__img">
 
 
 
               </a>
               <!--item 5-->
-              <a href="#" class="portfolio__item">
+              <a href="project_pages/scrape.html" class="portfolio__item">
                   <img src="images/projects/gutenberg/cover.JPG" alt="" class="portfolio__img">
 
 
 
               </a>
               <!--item 6-->
-              <a href="#" class="portfolio__item">
+              <a href="project_pages/scheduler.html" class="portfolio__item">
                   <img src="images/projects/scheduler/cover.JPG" alt="" class="portfolio__img">
 
 
 
               </a>
               <!--item 7-->
-              <a href="#" class="portfolio__item">
+              <a href="project_pages/shell.html" class="portfolio__item">
                   <img src="images/projects/shell/cover.JPG" alt="" class="portfolio__img">
 
 
@@ -123,29 +124,26 @@
         </section>
 
         <!--About Me-->
-        <section class="about-me" id="about_me">
+        <section class="about-me" id="aboutme">
               <h2 class="section__title section__title--about">About Me</h2>
-              <p class="section__subtitle section__subtitle--about" data-aos="fade-in">Based in Denver, Co</p>
+              <p style = "max-width: 80%" class="section__subtitle section__subtitle--about" data-aos="fade-in">Based in Denver, Co</p>
 
-              <div class="about-me__body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Sed a eros vitae nulla efficitur blandit tempor nec purus.
-                    Donec posuere magna sit amet risus pharetra molestie.
-                    Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-                    Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-                    at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-                    libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-                    sagittis risus</p>
-                  <p>lorem ipsum</p>
+              <div style = "max-width: 70%; margin = 0 auto" class="about-me__body">
+                  <p>Hello! I am a graduate student pursuing a masters of science in computer science at
+                    the University of Colorado, Denver. I am working on projects in data analytics,
+                    especially related to the environmental science and renewable energy fields.
+                    I am anticipating completing my masters program December 2021.</p>
+
               </div>
-              <img src="images/stock8.jpg" class="about__img" data-aos="fade-in">
+              <img style = "max-width: 0px" src="images/stock8.jpg" class="about__img" data-aos="fade-in">
         </section>
 
 
 
             <!--footer-->
             <footer class="footer">
-              <p class="section__title section__title--footer">Reach out here!</p>
+              <p class="section__title section__title--footer">Interested in a project?  Want to connect?</p>
+              <p class="section__title section__title--footer">Contact me here!</p>
               <a href="mailto:druss337@gmail.com" class="footer__link" id="contact">druss337@gmail.com</a>
               <ul class="social-list">
 
