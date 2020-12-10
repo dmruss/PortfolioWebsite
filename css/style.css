@@ -13,7 +13,7 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #FFF;
+    --clr-light: #edebe1;
     --clr-dark: #303030;
     --clr-accent: #5c67ff;
 
@@ -192,9 +192,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2em;
-  margin-top: 15em;
 
+
+}
+
+.buffer {
+  background-color: var(--clr-light);
+}
+
+.underphoto {
+  height: 10em;
+}
+
+.underlinks {
+  height: 2em;
 }
 
 .nav__item {
@@ -232,6 +243,8 @@ header {
 
     }
 
+
+
     .intro__img {
       grid-area: img;
       min-width: 300px;
@@ -240,6 +253,11 @@ header {
       grid-row: 4;
 
     }
+
+    .underphoto {
+      height: 0em;
+    }
+    
 
     .section__title--intro {
       grid-row: 4;
@@ -273,7 +291,7 @@ header {
       border-bottom: 2px solid grey;
 
       margin: 0 auto;
-      margin-bottom: 2em;
+
       background-color: var(--clr-light);
       width: 100%;
     }
@@ -537,11 +555,16 @@ header {
 .project-body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  margin-top: 0em;
 }
 
 .intro {
   position: relative;
 
+}
+
+.links__list-project {
+  margin-bottom: 0em;
 }
 
 
@@ -580,6 +603,10 @@ header {
 .section__subtitle--intro-project {
   transform: translate(0%, -400%);
   margin-top: -220px;;
+}
+
+.underlinks {
+  height: 2em;
 }
 
 .portfolio-item-individual {
