@@ -51,11 +51,11 @@
 
           <p></p>
           <img class="portfolio-item-individual-image"src="../images/projects/shell/start.JPG">
-          <p style = "font-size: 25px" class="portfolio-item-individual-description">This program runs a single player version of
-            the classic tabletop game battleship. The player faces off against the computer to see which
-             one can sink the other's 5 ships first. The player's ship coordinates and orientation are
-             first read in from an external csv file and then the computer's ship positions are randomly
-             generated. The player and computer take turns guessing a coordinate which may contain a ship.</p>
+          <p style = "font-size: 25px" class="portfolio-item-individual-description">This was a great exercise
+            in learning about Linux system calls and process concurrency. This shell is built to run single word
+            commands (ps, date, etc.), commands with arguments (ps -aux), and commands with input and output
+            redirection (ls > output.txt). The system calls are run within a child process while the parent
+            process wait for the child to terminate.</p>
           <p></p>
         </div>
 
@@ -65,6 +65,23 @@
 
           <p></p>
         </div>
+        <div style="margin:0 auto; width: 75%; font-size: 20px">
+          <p style="font-size:25px"><strong>Key Functions</strong></p>
+          <p><strong>fork()</strong> - Used to create a concurrent child process.</p>
+
+          <p><strong>execvp()</strong> - Used to execute the system call. This function takes two arguments: the first is the path to the command and the second is a pointer to a c_string array containing the command and arguments.</p>
+
+<p><strong>dup2()</strong> - This is used to redirect the input or output of command when using '<' or '>'. This takes two arguments, the first is the new file descriptor as an int and the second is the file descriptor to be replaced, as an int.</p>
+
+<p><strong>getInput()</strong> - This is a custom function which takes the user's input and parses it into c_strings. This allows the shell to repackage the commands as needed.</p>
+
+<p><strong>getPath()</strong> - Function to concatenate path with command name or file namespace</p>
+
+<p><strong>buildArgList()</strong> - Builds an array of c_strings from the command and each argument. Also builds a second array of c_strings made from only the command and arguments to the left of a '<'.</p>
+
+<p><strong>forkAndExec()</strong> - Where the child processes is created and executed.</p>
+
+<strong>execRedirect()</strong> - Function to execute commands with redirects (< and >). This function uses dup2() to change the file descriptor.</div>
 
         <div class="portfolio-item-individual">
           <p></p>
