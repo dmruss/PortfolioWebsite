@@ -14,8 +14,8 @@
     --fw-bold: 900;
 
     --clr-light: #303030;
-    --clr-dark: #edebe1;
-    --clr-accent: #5c67ff;
+    --clr-dark: #FFF;
+    --clr-accent: #ffaa00;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -602,8 +602,27 @@ header {
   grid-column: 1;
 }
 
+.inline-photo {
+  border: 1em solid #fff;
+border-bottom: 4em solid #fff;
+border-radius: .25em;
+box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+margin: 2em auto;
+opacity: 1;
+transform: translateY(1em) rotateZ(-5deg);
+
+max-width: 400px;
+width: 90%;
+
+}
+
 @media (min-width: 1000px) {
 
+.battleship_photo {
+
+  transform: scale(100%) rotateZ(-5deg);
+  margin-top: 20px;
+}
 
 .section__subtitle--intro-project {
   transform: translate(0%, -400%);
@@ -642,18 +661,4 @@ header {
   min-width: 600px;
   box-shadow: var(--bs)
 }
-}
-
-.inline-photo {
-  border: 1em solid #fff;
-border-bottom: 4em solid #fff;
-border-radius: .25em;
-box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
-margin: 2em auto;
-opacity: 1;
-transform: translateY(1em) rotateZ(-5deg);
-
-max-width: 400px;
-width: 90%;
-
 }

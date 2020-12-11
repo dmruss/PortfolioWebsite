@@ -52,11 +52,10 @@
 
           <p></p>
           <img class="portfolio-item-individual-image"src="../images/projects/awards/menu.JPG">
-          <p style = "font-size: 25px" class="portfolio-item-individual-description">This program runs a single player version of
-            the classic tabletop game battleship. The player faces off against the computer to see which
-             one can sink the other's 5 ships first. The player's ship coordinates and orientation are
-             first read in from an external csv file and then the computer's ship positions are randomly
-             generated. The player and computer take turns guessing a coordinate which may contain a ship.</p>
+          <p style = "font-size: 25px" class="portfolio-item-individual-description">This program is a database
+            management system for the Academy Awards. Two files, one for movies and one for actors, are read from
+            a file into separate vectors. Then, the user may search, modify, sort, display, and save the records.
+            Currently, all functions work in this program and compile successfully on csegrid.</p>
           <p></p>
         </div>
 
@@ -65,6 +64,15 @@
           <img style= "min-width: 900px; margin: 0 auto" class="portfolio-item-individual-image"src="../images/projects/awards/actors.JPG">
 
           <p></p>
+        </div>
+
+        <div class="portfolio-item-individual">
+
+          <p></p>
+
+          <p style = "grid-column: 1/-1; margin:0 auto" class="portfolio-item-individual-description">Above is a console
+          print out of the actor database.  Below is a console print out of the movie database.</p>
+
         </div>
 
         <div class="portfolio-item-individual">
@@ -79,72 +87,71 @@
         <div class="portfolio-item-individual">
           <p></p>
           <img class="portfolio-item-individual-image"src="../images/projects/awards/addrecord.JPG">
-          <div class="portfolio-item-individual-description"><strong>Output Requirements:</strong>
-
-            <p><strong>Boards to console.</strong> The player's ship board and attack board will be output to
-              the console each turn. They will be output as a 10 x 10 grid with letters A - J on the x-axis
-              along the top and 1 - 10 on the y-axis on the left. Each successful "hit" from a torpedo will
-              be marked as an O in a box and an unsuccessful "hit" will be marked as an X. On the ship board,
-              each of the player's ships will be shown on the board with a corresponding letter in each space
-              it occupies (Carrier: C, Battleship: B, Cruiser: R, Submarine: S, Destroyer: D).</p>
-
-            <p><strong>Prompt for user Input: </strong>Each turn a prompt for the player to input a guess will
-               be output to the console. This will be done in the format "First coordinate:" (data type char)
-               (valid range: A - J) and "Second coordinate:
-              "(data type int) (valid range: 1 - 10).</p>
-
-            <p><strong>Computer guess:</strong> The computer's guess will be output to the console in the format
-              of "A5", with the first coordinate being a (data type char) (valid range: A - J) and the second
-               being a (data type int) (valid range:
-              1 - 10).</p></div>
+          <div class="portfolio-item-individual-description">
+            <p style = "font-size:25px"><strong>Menu Functions</strong></p>
+            The user interface scheme is a switch based system. Each menu the user is
+shown lists each choice with an integer in front, with the final option always being to
+return to the previous menu or quit (in the case of the main menu).
+          <p>An example of the main menu and first submenu is shown to the left.  When the user selects ‘1’ or ‘5’ they are shown a message that the action as been
+successful and are shown no further sub-menus.  In this case, the user selects '2' and is adding
+          a movie record.  </p>
+</div>
           <p></p>
         </div>
 
-        <div class="portfolio-item-individual">
-          <p></p>
 
-          <p style="grid-column: 1/-1; margin:0 auto" class="portfolio-item-individual-description">The key algorithms for this program are within the ReadFile() function and the RandomizeShips() function. The ReadFile() function will evaluate if the input file matches the correct format. After reading in and parsing the information on each ship, this function calls the ship constructor and stores the ship object in a vector which it returns. If it does not match the correct number of rows, columns, and ship names then it will throw an exception. The RandomizeShips() function contains a random number generator and an algorithm which iterates through each ship's coordinate points to look for overlapping points. If there are no overlapping points, and the ship's starting point, size and orientation do not cause it to go off the board then a ship object is instantiated and stored in a vector. This function is called from within the CompPlayer constructor.</p>
-
-        </div>
-
-
-
-        <div class="portfolio-item-individual">
-          <p></p>
-
-          <div style="grid-column: 1/-1" class="portfolio-item-individual-description"><p>First, the player's ship information will be read from the .csv into the program using the ReadFile() function. If the file does not match the correct format then the program will throw an exception and ask the user to correct the file. Once a valid file is read into the program, Ship class objects will be constructed from the data. At this point, if any of the ships have incorrect placement (out of bounds or overlapping another ship) the program will throw an exception asking the user to correct the file. Once the 5 Ship class objects are created, a Board class object will be created from an array of the Ship objects as the player's ship board. A player attack board will also be created.</p>
-
-<p>The program will now use the default Ship constructor to randomly create 5 ship objects for the computer using the Ship() default constructor. These will be used to instantiate a Board class object. An attack board will then be instantiated for the computer.</p>
-
-<p>Once the 4 game boards are created, the game loop will begin. The game loop will continue until either all 5 of one player's ships are sunk or the player chooses to quit. It will begin by asking the player to input a coordinate to torpedo, one coordinate at a time. If it is a hit, an O will appear on the attack board, a miss will appear as an X. Then, the computer's coordinate guess is printed to the screen. A hit will be recorded on the player's ship board with an O, a miss with an X.</p></div>
-          <p></p>
-        </div>
 
         <div class="portfolio-item-individual">
 
           <p></p>
           <img class="portfolio-item-individual-image"src="../images/projects/awards/sortactors.JPG">
-          <p style = "font-size: 25px" class="portfolio-item-individual-description">This program runs a single player version of
-            the classic tabletop game battleship. The player faces off against the computer to see which
-             one can sink the other's 5 ships first. The player's ship coordinates and orientation are
-             first read in from an external csv file and then the computer's ship positions are randomly
-             generated. The player and computer take turns guessing a coordinate which may contain a ship.</p>
-          <p></p>
+          <div class="portfolio-item-individual-description">
+            <p>Here is a screenshot of a user selecting '4' for the sort
+          function.  Once the user then selects one of those choices, the search menu will prompt the user to enter their search criteria, and the sort menu will begin displaying the sorted
+vector.
+
+</p>
+          <p>These submenus continue to loop if the user wishes to continue the selected
+          action. For example, if the user sorted movies by year, the program will continue to
+          prompt the user to sort for another field until the user selects to navigate back to the
+          previous menu.</p></div>
         </div>
+
+
 
         <div class="portfolio-item-individual">
 
           <p></p>
           <img class="portfolio-item-individual-image"src="../images/projects/awards/sortmovies.JPG">
-          <p style = "font-size: 25px" class="portfolio-item-individual-description">This program runs a single player version of
-            the classic tabletop game battleship. The player faces off against the computer to see which
-             one can sink the other's 5 ships first. The player's ship coordinates and orientation are
-             first read in from an external csv file and then the computer's ship positions are randomly
-             generated. The player and computer take turns guessing a coordinate which may contain a ship.</p>
+          <p class="portfolio-item-individual-description">The submenus are error tolerant and will continue to loop if the user enters a
+          character or an integer that is out of bounds for the menu.</p>
           <p></p>
         </div>
 
       </div>
+
+      <div class="portfolio-item-individual">
+        <p></p>
+
+        <div style="grid-column: 1/-1; margin:0 auto; color: black" class="portfolio-item-individual-description">
+        <p style = "font-size:25px"><strong>Key Algorithms</strong></p>
+        <p>One key algorithm is the insertion sort algorithm which is used to sort each
+attribute for both classes. This algorithm iterates through the vector and compares the
+current item’s attribute to the next item’s attribute. If the next item’s attribute is smaller
+than the current item’s, then that item is swapped successively to the left until it is larger
+than the item to its left. The time complexity for the insertion sort is O(n^2).
+</p>
+
+        <p>Another key algorithm is the partial/complete search algorithm. This algorithm
+iterates through the vector from beginning to end checking each object’s member
+variables against the search terms that the user input. This is done with a for loop and
+an if statement inside. The time complexity for this algorithm is O(n)</p></div>
+
+      </div>
+
+
+
+
 
 
 
