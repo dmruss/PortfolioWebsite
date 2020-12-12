@@ -616,6 +616,21 @@ width: 90%;
 
 }
 
+.portfolio-item-individual-image-map {
+  box-shadow: var(--bs);
+
+}
+
+
+.portfolio-item-individual-image-map-grid {
+  box-shadow: var(--bs);
+  margin:0 auto;
+  overflow: hidden;
+
+}
+
+
+
 @media (min-width: 1000px) {
 
 .battleship_photo {
@@ -661,4 +676,17 @@ width: 90%;
   min-width: 600px;
   box-shadow: var(--bs)
 }
+
+.portfolio-item-individual-image-map {
+
+  box-shadow: var(--bs);
+
+  max-width: 800px;
+
+}
+
+
+
+
+
 }

@@ -40,7 +40,7 @@
         <div style="margin-bottom: 0em" class="links__list">
           <div class = "buffer underphoto"></div>
           <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="../index.html#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="../index.html#resume" class="nav__link">Resume</a></li>
           <li class="nav__item"><a href="../index.html#about_me" class="nav__link">About Me</a></li>
           <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact Me</a></li>
@@ -49,36 +49,55 @@
         <div class="project-body">
 
           <div class="portfolio-item-individual">
-          <p style="grid-column:1/-1; font-size:25px">This project is a data mining analysis
-            of Colorado wildfires. The dataset is supplied by the Forest Service Data Archive, and was developed and
-            maintained by Karen Short at the US Forestry Science Lab. The data is geospatial data housed in sqlite
-            database and is available for download on the Forest Service website [0]. The data spans 24 years, from
-            1992 to 2015, and contains wildfire data from the entire US. This is a multidimensional database with
-            1.88 million wildfire entries. The coordinate point is within 1-square-mile of accuracy. There are 39
-            attributes for each fire which span many different types and formats. To maintain scope and relevance,
-            this report will be focusing on wildfires located in Colorado.</p>
+            <p></p>
+            <div style="grid-column:1/-1; font-size:25px">This is a data science project investigating wildfires in Colorado.
+              The main questions of this report are:
+              <p>1) Have wildfire characteristics changed over time? This report looks to find if there is any meaningful trend in select characteristics over this period of time. </p>
+                <p>2) Which regions in Colorado are “hotspots” for wildfires? This report looks to define regions of the state that are historic wildfire hotspots. These regions may cross county boundaries and may vary greatly in size. The similarity of the fires in these clusters relative to their dissimilarity to fires outside the cluster will determine the success of their clustering. </p>
+                <p>3) Can a classification model be trained to predict the cause of a wildfire more accurately than a standard baseline?  If the model can predict a wildfire cause more accurately and precisely than a guess of the most common cause then it will be deemed successful. </p>
+
+              </div>
+
+
           </div>
         <div class="portfolio-item-individual">
 
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/wildfiregif.gif">
 
+          <div >
+          <img class="portfolio-item-individual-image-map"src="../images/projects/wildfires/wildfiregif.gif">
+        </div>
 
         </div>
 
-        <div class="portfolio-item-individual">
-        <div style="grid-column:1/-1">The main questions of this report are:
-          <p>1) Have wildfire characteristics changed over time? This report looks to find if there is any meaningful trend in select characteristics over this period of time. </p>
-            <p>2) Which regions in Colorado are “hotspots” for wildfires? This report looks to define regions of the state that are historic wildfire hotspots. These regions may cross county boundaries and may vary greatly in size. The similarity of the fires in these clusters relative to their dissimilarity to fires outside the cluster will determine the success of their clustering. </p>
-            <p>3) Can a classification model be trained to predict the cause of a wildfire more accurately than a standard baseline?  If the model can predict a wildfire cause more accurately and precisely than a guess of the most common cause then it will be deemed successful. </p>
-            <p>The stakeholders in this project include Colorado residents, private landowners, the U.S. Forest Service, the Bureau of Land Management, and environmental recreators and educators. Federal wildfire suppression alone accounted for over $3 billion worth of expenses in 2018, doubling from close to $1.5 billion in 2008 [1]. With more Coloradans living in the “wildland-urban interface”, development close to or in forested areas[3], than ever before it is of key importance to understand at-risk regions and fire trends in the state. Also, with a high number of fires originating from man-made causes, potentially 90%, accurate public understanding and education about the causes of wildfires is more important than ever [2].</p>
-          </div>
-        </div>
+        <div class = "portfolio-item-individual">
+          <div style="grid-column:1/-1"><p><strong>Background</strong></p>The stakeholders in this project include Colorado residents, private landowners, the U.S. Forest Service, the Bureau of Land Management, and environmental recreators and educators. Federal wildfire suppression alone accounted for over $3 billion worth of expenses in 2018, doubling from close to $1.5 billion in 2008 [1]. With more Coloradans living in the “wildland-urban interface”, development close to or in forested areas[3], than ever before it is of key importance to understand at-risk regions and fire trends in the state. Also, with a high number of fires originating from man-made causes, potentially 90%, accurate public understanding and education about the causes of wildfires is more important than ever [2].</div>
+        <p style="grid-column:1/-1">This project is a data mining analysis
+          of Colorado wildfires. The dataset is supplied by the Forest Service Data Archive, and was developed and
+          maintained by Karen Short at the US Forestry Science Lab. The data is geospatial data housed in sqlite
+          database and is available for download on the Forest Service website [0]. The data spans 24 years, from
+          1992 to 2015, and contains wildfire data from the entire US. This is a multidimensional database with
+          1.88 million wildfire entries. The coordinate point is within 1-square-mile of accuracy. There are 39
+          attributes for each fire which span many different types and formats. To maintain scope and relevance,
+          this report will be focusing on wildfires located in Colorado.  Above is a heatmap I created during the data exploration phase
+      to get a better idea of which parts of the state were going to be a major focus.</p>
+    </div>
+
+    <div class = "portfolio-item-individual">
+
+      <div style="grid-column:1/-1"><p><strong>Tools</strong></p>Due to the geospatial nature of this dataset, the open source GIS software QGIS was used during the exploratory phase of this project.  This had several benefits: it provided a big picture view of the dataset, allowed for quick and visual clustering, enabled quick breakdowns by county using spatial joins, and interfaced easily with the SQL database using SpatiaLite.  A Colorado state base map was imported from the Colorado DOT website [6].  Kmeans and DBSCAN clustering were both performed in QGIS using vector processing tools.  Importing csv files that had been clustered in Jupyter notebooks worked easily using the Import Delimited Text File function.  This allowed for map creation.
+</div>
+    <p style="grid-column:1/-1">Python and Jupyter notebooks were used for all other clustering, classification, and plotting.  SQLite3 was used to import and query the database when first starting the project.  This allowed for the selection of the Colorado wildfire entries.  The Colorado wildfires were then imported to a pandas dataframe which was used as the main data structure for the remainder of the project.  Numpy and pandas were used extensively when selecting and slicing data to prepare for methods.  Pandas was also used for descriptive statistics.  Matplotlib was used along with the pandas implementation for plotting.  The Scikit-learn library was used for all other unsupervised and supervised learning implementations.  The Scikit-learn library was also used for model selection and metrics reporting.
+</p>
+</div>
+
+
 
         <div class="portfolio-item-individual">
 
-          <img  style="grid-row:1"class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/Fires_by_year.png">
-
+          <img style = "grid-row:1; grid-column:1"class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/Fires_by_year.png">
+          <p style = "grid-row:1; grid-column:5; transform:translate(-20px, 0)">Charts like those shown here were used during the data exploration phase
+          to better understand the distribution of the fires over time.  Some attributes, such as mean fire size, were log corrected to better show
+        the trends with some very large fire sizes.</p>
           <p></p>
         </div>
 
@@ -89,112 +108,70 @@
           <p></p>
         </div>
 
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/Counties_cluster.jpeg">
 
+
+        <div class="portfolio-item-individual">
+        <div style="grid-column:1/-1"class="portfolio-item-individual-description">A large part of this report
+          consists of evaluating different clustering methods for the geospatial data. This serves several
+          purposes within the scope of this study:
+          <p>1) It helps to find which regions
+          of Colorado are hotspots for wildfires. </p>
+          <p>2) It serves as feature engineering for the classification methods
+          used later in the report. </p>
+          <p>Unsupervised learning works as a way to take noisy, but extremely necessary,
+          coordinate points and distill them down to discrete regions. Three different methods (K-means, DBSCAN,
+          and Agglomerative Hierarchical) were used with various parameter combinations and compared to a
+          baseline/naive method (clustering by county). Each clustering iteration’s success was evaluated using a
+          silhouette score. The higher the score, between -1 and 1, the greater the similarity that a wildfire has
+          to the fires in its cluster and the lower the similarity that it has to other clusters.<p></div>
+        </div>
+
+        <div class="portfolio-item-individual-maps-container">
+          <style>
+          .portfolio-item-individual-maps-container {
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 3fr));
+          }
+          </style>
+
+
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/Counties_cluster.jpeg">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/Kmeans_24.jpeg">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/Agg_0.6.jpeg">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/DBSCAN_150_0.06.jpeg">
+          <p></p>
+        </div>
+
+
+
+
+
+
+
+        <div class="portfolio-item-individual">
+        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Five different methods were used for the classification section of this analysis, Linear Discriminant Analysis, K Nearest Neighbor, Decision Tree, Gaussian Naive Bayes, and a Neural Network. Each of these methods were trained and tested using a 10-fold cross validation which was compared with a baseline/naive method which only selected the most common outcome. 80% of the data was used for training the models while 20% was withheld for testing the models. These classifiers were deliberately run using default parameter settings, then whichever classifier proved to be the most accurate would move on to have its parameters tuned.</p>
+        </div>
+
+        <div class="portfolio-item-individual-maps-container">
+
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/MF_baseline_class.jpeg">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/DBSCAN_validation.jpeg">
           <p></p>
         </div>
 
         <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
+        <p style="grid-column:1/-1"class="portfolio-item-individual-description">K nearest neighbor (KNN) were used to classify the fires based on the euclidean distance of the training data’s inputs. This method was selected due to the dataset’s multivariable independent and dependent variables [10, p. 423]. The parameters used were number of neighbors = 5, weight of inputs are uniform, auto select algorithm, leaf size of 30, p value of 2 (euclidean distance), and the distance metric for constructing the tree is the minkowski metric.</p>
         </div>
 
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/Agg_0.6.jpeg">
 
-          <p></p>
-        </div>
 
         <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
-        </div>
+        <div style="grid-column:1/-1"class="portfolio-item-individual-description"><p><strong>Lessons Learned</strong></p>First, this analysis does not indicate that there is a noticeable trend in wildfire data over the period from 1992 to 2015 with regards to frequency, size, burn time and day of discovery.  This section of the report showed that wildfire data is heavily left skewed towards smaller, more frequent fires as one would expect in a fire prone region.  </div>
+        <div style="grid-column:1/-1"class="portfolio-item-individual-description">Second, while there are wildfires in every county in the state, this report identifies that there are eight high risk “hotspot” areas for wildfires in Colorado.  The criteria for this designation is that there have been at least 150 reported wildfires within a 4 mile radius over the time period of this dataset.  In the northwest of the state there are three notable areas: One located in the town of Greystone, another covering Eagle and Gypsum, and a third in Rio Blanco county north of Grand Junction.  In the southwest, there are two areas: the area with the highest frequency (1953 fires) is located around Cortez and Towaoc (mainly on Ute reservation land) and the second is around the small town of Bondad.  The last three areas are in the front range: the first in Pueblo, the second in Colorado Springs, and the third near the town of Buffalo Creek (the lowest frequency of the 8 hotspots with 152 fires).
+</div>
+        <div style="grid-column:1/-1"class="portfolio-item-individual-description">Third, when training classification models to predict fire cause, K nearest neighbor consistently performed best regardless of the clustering method used to generate features, when compared against other models with default parameters.  DBSCAN clusters did perform better during KNN training than the other methods, likely due to outlier detection and removal.   </div>
+        <div style="grid-column:1/-1"class="portfolio-item-individual-description">While the KNN model did predict wildfire cause 16% better than the baseline and with a 0.29 greater F1 score, it could likely be improved with the inclusion of more string data type features (after indexing) and the transformation of more features to fit a normal distribution.  A surprising result was that the KNN trained with the baseline county cluster IDs performed as well as the K-means and agglomerative clustering methods.  A conclusion drawn from this is that while the clustering methods contain useful information for stakeholders and managers, ultimately it did not impact prediction success.  </div>
 
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/DBSCAN_150_0.06.jpeg">
-
-          <p></p>
-        </div>
-
-        <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
-        </div>
-
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/Kmeans_24.jpeg">
-
-          <p></p>
-        </div>
-
-        <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
-        </div>
-
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/MF_baseline_class.jpeg">
-
-          <p></p>
-        </div>
-
-        <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
-        </div>
-
-        <div class="portfolio-item-individual">
-          <p></p>
-          <img  class="portfolio-item-individual-image-graph"src="../images/projects/wildfires/DBSCAN_validation.jpeg">
-
-          <p></p>
-        </div>
-
-        <div class="portfolio-item-individual">
-        <p style="grid-column:1/-1"class="portfolio-item-individual-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed a eros vitae nulla efficitur blandit tempor nec purus.
-          Donec posuere magna sit amet risus pharetra molestie.
-          Donec ac tortor consectetur, fringilla metus in, ornare sapien.
-          Etiam molestie tempor euismod. Cras dapibus dui id magna faucibus,
-          at vehicula tortor efficitur. Sed sagittis gravida lorem, et dapibus
-          libero volutpat non. Nunc tempus eu mi vitae sollicitudin. Etiam sit amet
-          sagittis risus.</p>
         </div>
 
       </div>
