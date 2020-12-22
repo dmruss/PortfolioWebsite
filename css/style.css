@@ -61,6 +61,23 @@ strong {font-weight: var(--fw-bold);}
   outline-offset: 3px;
 }
 
+.button {
+  font-size: 23px;
+  margin: 0 auto;
+  background-color:var(--clr-accent);
+  padding:20px;
+  box-shadow:0 9px #999;
+  border-radius:25px
+}
+.button:hover {
+  background-color: #b07500
+}
+.button:active {
+  background-color: #b07500;
+  box-shadow: 0 5px #666;
+  transform:translateY(4px);
+}
+
 .btn {
   display: inline-block;
   margin-top: 1.5em;
@@ -318,6 +335,7 @@ header {
 }
 
 
+
 /*my services*/
 
 .my-services {
@@ -507,6 +525,14 @@ header {
   box-shadow: var(--bs);
 }
 
+@media (min-width:1500px) {
+  .portfolio {
+    display:grid;
+    grid-template-columns: repeat(4, 350px);
+    justify-content: center;
+  }
+}
+
 
 
 
@@ -680,7 +706,8 @@ width: 90%;
 .portfolio-item-individual-image-map {
 
   box-shadow: var(--bs);
-
+  overflow:hidden;
+  transform:translate(10%,0);
   max-width: 800px;
 
 }

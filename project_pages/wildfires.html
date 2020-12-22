@@ -47,6 +47,12 @@
         </div>
         <div class = "buffer underlinks"></div>
         <div class="project-body">
+          <div class="project-body">
+            <p></p>
+            <div style="display:flex"class="portfolio-item-individual">
+          <a class = "button" href="https://github.com/dmruss/ColoradoWildfires">Click here to view the GitHub repo.</a>
+
+        </div>
 
           <div class="portfolio-item-individual">
             <p></p>
@@ -64,7 +70,7 @@
 
 
           <div >
-          <img class="portfolio-item-individual-image-map"src="../images/projects/wildfires/wildfiregif.gif">
+          <img style="margin:0 auto"class="portfolio-item-individual-image-map"src="../images/projects/wildfires/wildfiregif.gif">
         </div>
 
         </div>
@@ -127,10 +133,22 @@
         </div>
 
         <div class="portfolio-item-individual-maps-container">
+
           <style>
           .portfolio-item-individual-maps-container {
             display:grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 3fr));
+            grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+
+          }
+          @media (min-width: 1000px) {
+            .portfolio-item-individual-maps-container {
+
+              display:grid;
+              grid-template-columns: repeat(2, 500px);
+              justify-content: center;
+
+            }
+
           }
           </style>
 
@@ -139,7 +157,7 @@
           <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/Kmeans_24.jpeg">
           <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/Agg_0.6.jpeg">
           <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/wildfires/DBSCAN_150_0.06.jpeg">
-          <p></p>
+
         </div>
 
 
