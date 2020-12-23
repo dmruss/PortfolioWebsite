@@ -137,7 +137,7 @@ h3 {font-size: var(--fs-h3);}
   font-family: var(--ff-secondary);
   color: var(--clr-light);
   margin-bottom: 1em;
-  transform: translateY(-400%);
+
 }
 
 
@@ -217,7 +217,7 @@ header {
 }
 
 .underphoto {
-  height: 10em;
+  height: 8em;
 }
 
 .underlinks {
@@ -296,7 +296,7 @@ header {
       text-align: left;
       text-indent: 16.5em;
       position: absolute;
-      transform: translateY(-400%);
+
       left: -3em;
       width: calc(100% + 5em);
 
@@ -613,7 +613,7 @@ header {
 
 
 .section__subtitle--intro-project {
-  transform: translate(0%, -400%);
+
 }
 
 
@@ -629,6 +629,11 @@ header {
 .portfolio-item-individual-image {
   box-shadow: var(--bs);
   width:90%;
+}
+
+.image_tall {
+  width: 25%;
+
 }
 
 .portfolio-item-individual-image-graph {
@@ -649,7 +654,7 @@ border-radius: .25em;
 box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
 margin: 2em auto;
 opacity: 1;
-transform: translateY(1em) rotateZ(-5deg);
+transform: translateY(5em) rotateZ(-15deg);
 
 max-width: 400px;
 width: 90%;
@@ -680,7 +685,7 @@ width: 90%;
 }
 
 .section__subtitle--intro-project {
-  transform: translate(0%, -400%);
+
   margin-top: -220px;;
 }
 
@@ -708,6 +713,11 @@ width: 90%;
   min-width: 400px;
   box-shadow: var(--bs)
 }
+
+.image_tall {
+  min-width:232px;
+}
+
 
 .image_wide {
   min-width: 900px;

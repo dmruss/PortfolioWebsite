@@ -27,9 +27,9 @@
             <h1 class="section__title section__title--intro">
                 Paging Simulator
             </h1>
-            <p  class="section__subtitle section__subtitle--intro section__subtitle--intro-project" data-aos="fade-in" data-aos-duration="1500">for virtual memory management</p>
+            <p  class="section__subtitle section__subtitle--intro section__subtitle--intro-project" >for virtual memory management</p>
 
-            <img src="../images/projects/paging/cover.jpg" alt="cover" class="intro__img inline-photo">
+            <img src="../images/projects/paging/cover.jpg" alt="cover" data-aos="fade-in" data-aos-duration="1500" class="intro__img inline-photo">
 
 
 
@@ -39,11 +39,11 @@
 
 
         <div style="margin-bottom: 0em" class="links__list">
-          <div class = "buffer underphoto"></div>
+          <div style="height:5em"class = "buffer"></div>
           <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
           <li class="nav__item"><a href="../index.html#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="../index.html#resume" class="nav__link">Resume</a></li>
-          <li class="nav__item"><a href="../index.html#about_me" class="nav__link">About Me</a></li>
+          <li class="nav__item"><a href="../index.html#aboutme" class="nav__link">About Me</a></li>
           <li class="nav__item"><a href="../index.html#contact" class="nav__link">Contact Me</a></li>
         </div>
         <div class = "buffer underlinks"></div>
@@ -51,16 +51,17 @@
           <div class="project-body">
             <p></p>
             <div style="display:flex"class="portfolio-item-individual">
-          <a class = "button" href="https://github.com/dmruss/GutenbergScrape">Click here to view the GitHub repo.</a>
+          <a class = "button" href="https://github.com/dmruss/PagingSim">Click here to view the GitHub repo.</a>
 
         </div>
         </div>
         </div>
+
         <div class="portfolio-item-individual">
 
           <p></p>
-          <img class="portfolio-item-individual-image"src="../images/projects/gutenberg/input.JPG">
-          <p style = "font-size: 25px" class="portfolio-item-individual-description">The program will read an input file
+          <img class="portfolio-item-individual-image image_tall"src="../images/projects/paging/input.JPG">
+          <p style = "font-size: 25px; color:black" class="portfolio-item-individual-description">The program will read an input file
           and count the number of words by first letter.  This is a practice in reading input files and tokenizing
           strings.  To the left is a screenshot of the input file used.  Any input file could be used with this program.</p>
           <p></p>
@@ -72,14 +73,49 @@
 
         <div class="portfolio-item-individual">
           <p></p>
-          <img class="portfolio-item-individual-image"src="../images/projects/gutenberg/counts.JPG">
-          <div class="portfolio-item-individual-description">The output is a bar chart of the word counts by first letter.</div>
+          <img class="portfolio-item-individual-image image_wide"src="../images/projects/paging/output.JPG">
+
           <p></p>
         </div>
 
+        <div class="portfolio-item-individual">
+        <div style="grid-column: 1/ -1; color:black" class="portfolio-item-individual-description">The output is a bar chart of the word counts by first letter.</div>
+        </div>
+
+        <div class="portfolio-item-individual-maps-container">
+
+          <style>
+          .portfolio-item-individual-maps-container {
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+
+          }
+          @media (min-width: 1000px) {
+            .portfolio-item-individual-maps-container {
+
+              display:grid;
+              grid-template-columns: repeat(2, 500px);
+              justify-content: center;
+
+            }
+
+          }
+          </style>
 
 
-      </div>
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/paging/fifograph.JPG">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/paging/lrugraph.JPG">
+          <img  class="portfolio-item-individual-image-map-grid"src="../images/projects/paging/optgraph.JPG">
+
+
+        </div>
+
+        <p></p>
+        <div class="portfolio-item-individual">
+        <div style="grid-column: 1/ -1; color:black" class="portfolio-item-individual-description">The output is a bar chart of the word counts by first letter.</div>
+        </div>
+
+
 
 
 
