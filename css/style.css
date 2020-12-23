@@ -54,7 +54,7 @@ img {
   max-width: 100%;
 }
 
-strong {font-weight: var(--fw-bold);}
+strong {font-weight: bold;}
 
 :focus {
   outline: 3px solid var(--clr-accent);
@@ -117,11 +117,10 @@ h3 {font-size: var(--fs-h3);}
 
 .section__title--intro {
 
-  font-weight: var(--fw-reg);
-
 }
 
 .section__title--intro strong {
+
   display: block;
   margin-bottom: .25em;
 }
@@ -337,6 +336,20 @@ header {
 
 
 /*my services*/
+.resume-container {
+  overflow: hidden;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  position: relative;
+}
+.resume-container iframe {
+  border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
 
 .my-services {
   background-color: var(--clr-light);
@@ -439,7 +452,7 @@ header {
     .about-me__body {
 
       max-width: 80%;
-      transform: translate(25%, 0%);
+
     }
 
 
@@ -614,7 +627,8 @@ header {
 }
 
 .portfolio-item-individual-image {
-  box-shadow: var(--bs)
+  box-shadow: var(--bs);
+  width:90%;
 }
 
 .portfolio-item-individual-image-graph {
@@ -693,6 +707,14 @@ width: 90%;
   grid-column:1;
   min-width: 400px;
   box-shadow: var(--bs)
+}
+
+.image_wide {
+  min-width: 900px;
+}
+
+.uml_diagram {
+  min-width:900px;
 }
 
 
